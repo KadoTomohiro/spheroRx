@@ -16,11 +16,18 @@ OSXのみ
  $ npm install
 ```
 
-2. serial portの設定
+2. Sphero接続の設定
 
-```sh
-$ cp config/sample.yml config/local.yml
-$ ls /dev/tty.Sphero*
-/dev/tty.Sphero-BBP-AMP-SPP   //<- copy & paste to config/local.yml
+[ここ](https://cylonjs.com/documentation/platforms/sphero/)を参考に、spheroとの接続を設定する。
+設定先は`config/default.yml`に変更。
+
+config/default.yml
+```yml
+config:
+  port: '/dev/tty.Sphero-XXX-XXX-XXX'
 ```
 
+3. 実行
+```sh
+$ npm start
+```
