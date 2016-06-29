@@ -1,0 +1,20 @@
+{
+  "name": "spheroRx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cylon": "^1.3.0",
+    "cylon-sphero": "^0.23.0",
+    "node-config": "0.0.2",
+    "rxjs": "^5.0.0-beta.9",
+    "serialport": "^3.1.2"
+  }
+}

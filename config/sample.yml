@@ -1,0 +1,6 @@
+# 1. Copy this file by running this command `cp config/sample.yml config/local.yml`.
+# 2. Find out serial port address by running this command `ls /dev/tty.Sphero*`.
+# 3. The port will look something like this: '/dev/tty.Sphero-BBP-AMP-SPP'
+# 2. Write serial port address.
+config:
+  port: '/dev/tty.Sphero*'
