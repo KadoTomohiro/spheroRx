@@ -22,8 +22,8 @@ Cylon.robot({
       .fromEventPattern(listner => my.sphero.on('dataStreaming', listner));
 
     dataStream
-      .map(data => ({x: data.xVelocity.value[0], y: data.yVelocity.value[0]}))
-      .filter(data => data.x > 0 || data.y > 0)
+      // .map(data => ({x: data.xVelocity.value[0], y: data.yVelocity.value[0]}))
+      // .filter(data => data.x > 10 || data.y > 10)
       .subscribe(data => console.log(data));
 
     // The data sources available for data Streaming from the
@@ -44,7 +44,9 @@ Cylon.robot({
       // pcnt = 0 means unlimited data Streaming
       // pcnt = 10 means stop after 10 data packets
       pcnt: 0,
-      dataSources: ["velocity", "odomoter"]
+      dataSources: ["motorsPWM", "imu", "accelerometer", "gyroscope",
+        "motorsIMF", "quaternion", "odometer", "accelOne",
+        "velocity"]
     };
 
     my.sphero.setDataStreaming(opts);
